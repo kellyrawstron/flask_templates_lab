@@ -1,0 +1,64 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: cornsilk
+}
+
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+input {
+    width: 80%;
+    padding: 15px;
+    margin: auto;
+
+}
+
+select {
+    width: 83%;
+    padding: 15px;
+    margin: auto;
+}
+
+input[type="submit"] {
+    width: 83%;
+    margin-top: 20px;
+}
+
+input[type="date"] {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+    width: 85%;
+    margin: auto;
+    margin-top: 50px;
+    list-style: none;
+}
+
+p {
+    display: grid;
+    grid-template-columns: 15% 15% 5% 15% 45% 5%;
+}

@@ -2,11 +2,13 @@
 
 {% block content %}
 
-    <h1>List of events</h1>
+    <h1>Event App</h1>
+
+    <h2>Add new event</h2>
 
     <form action="/events" method="post">
         <label for="date">Date</label>
-        <input type="text" name="date" id="date" placeholder="add date">
+        <input type="date" name="date" id="date" placeholder="add date">
         <label for="name">Event Name</label>
         <input type="text" name="name" id="name" placeholder="add your event">
         <label for="guests">Guests</label>
@@ -23,22 +25,21 @@
         <input type="submit" value="Add Event">
         
     </form>
-   
+   <h2>Upcoming events:</h2>
     <ul>
         {% for event in events %}
 
+
+
         <li>
-            <p>{{ event.name }}: 
-            <b>{{event.date}}:</b>
-            <b>{{event.guests}}:</b>
-            <b>{{event.location}}:
+            <p>{{event.name }} 
+            <b>{{event.date}}</b>
+            <b>{{event.guests}}</b>
+            <b>{{event.location}}</b>
             <b>{{event.description}}</b>
 
-            {% if event.recurring == "True"%}
-             <!-- any kind of condition can go here -->
+            {% if event.recurring%}
               <span> &#9989; </span>
-            else:
-              
             {% endif %}
             </p>
           
