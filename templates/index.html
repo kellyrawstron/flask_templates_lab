@@ -15,6 +15,11 @@
         <input type="text" name="location" id="location" placeholder="add location">
         <label for="description">Description</label>
         <input type="text" name="description" id="description" placeholder="add description">
+        <label for="recurring">Is recurring event?</label>
+        <select name="recurring" id="recurring">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
         <input type="submit" value="Add Event">
         
     </form>
@@ -24,11 +29,16 @@
 
         <li>
             <p>{{ event.name }}: 
-                <b>{{event.date}}:</b>
+            <b>{{event.date}}:</b>
             <b>{{event.guests}}:</b>
-        <b>{{event.location}}:
+            <b>{{event.location}}:
             <b>{{event.description}}</b>
-        </b></p>
+            <b>{{event.recurring}}</b> </p>
+            {% if event.recurring %}
+            <!-- any kind of condition can go here -->
+              <span> &#9989; </span>
+              
+            {% endif %}
         </li>
 
         {% endfor %}
