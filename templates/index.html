@@ -17,8 +17,8 @@
         <input type="text" name="description" id="description" placeholder="add description">
         <label for="recurring">Is recurring event?</label>
         <select name="recurring" id="recurring">
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+            <option value="True">True</option>
+            <option value="False">False</option>
         </select>
         <input type="submit" value="Add Event">
         
@@ -33,12 +33,15 @@
             <b>{{event.guests}}:</b>
             <b>{{event.location}}:
             <b>{{event.description}}</b>
-            <b>{{event.recurring}}</b> </p>
-            {% if event.recurring %}
-            <!-- any kind of condition can go here -->
+
+            {% if event.recurring == "True"%}
+             <!-- any kind of condition can go here -->
               <span> &#9989; </span>
+            else:
               
             {% endif %}
+            </p>
+          
         </li>
 
         {% endfor %}
