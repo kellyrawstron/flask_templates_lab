@@ -11,8 +11,8 @@
         <input type="text" name="name" id="name" placeholder="add your event">
         <label for="guests">Guests</label>
         <input type="text" name="guests" id="guests" placeholder="add number of guests">
-        <label for="room_location">Location</label>
-        <input type="text" name="room_location" id="room_location" placeholder="add location">
+        <label for="location">Location</label>
+        <input type="text" name="location" id="location" placeholder="add location">
         <label for="description">Description</label>
         <input type="text" name="description" id="description" placeholder="add description">
         <input type="submit" value="Add Event">
@@ -23,7 +23,12 @@
         {% for event in events %}
 
         <li>
-            <p>{{ event.name }}</p>
+            <p>{{ event.name }}: 
+                <b>{{event.date}}:</b>
+            <b>{{event.guests}}:</b>
+        <b>{{event.location}}:
+            <b>{{event.description}}</b>
+        </b></p>
         </li>
 
         {% endfor %}
